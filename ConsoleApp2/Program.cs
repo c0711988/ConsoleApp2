@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C0711988_Assignment2
 {
-    class Program
+   public class Program
     {
         public static void Main()
         {// Student Name Jaspreet Singh Dhaliwal  Student ID C0711988
@@ -28,17 +28,17 @@ public class DelegateExercises
     int Method1(int intMethod1)
 
     {
-        return intMethod1*2;
+        return intMethod1*4;
     }
-    int Method2(intMethod1)
+    int Method2(int intMethod1)
     {
-        return intMethod1*10;
+        return intMethod1*20;
 
     }
     public void Method4(MyDelegate myDelegate)
     {
-        int result = myDelegate(10);
-        Console.WriteLine(result);
+        for (int i = 1; i <= 5; i++)
+            System.Console.Write(myDelegate(i) + " ");
     }
     public void Method3()
     {
@@ -47,5 +47,4 @@ public class DelegateExercises
         myDelegate = new MyDelegate(Method2);
         Method4(myDelegate);
     }
-}
 }
