@@ -14,7 +14,7 @@ namespace C0711988_Assignment2
             //CSD3354 Section 2
             //Assignment 2
             // March 6,2019
-  
+            //TO DO: Call Method2 from the DelegateExercises Class
             DelegateExercises a = new DelegateExercises();
             a.Method2();
 
@@ -24,25 +24,17 @@ namespace C0711988_Assignment2
 
     public class DelegateExercises
 {
-    public delegate int  MyDelegate(int intValue);
+    public delegate int  MyDelegate();
 
-    public intMethod1(int iMethod1)
+    void Method1()
 
     {
-       return intMethod1 * 2;
-    }
+        System.Console.WriteLine("MyDelegate");
 
-    public int Method2(int intMethod2)
-    {
-        return intMethod2 * 10;
     }
     public void Method3()
     {
         MyDelegate myDelegate = new MyDelegate(Method1);
-        int result1 = myDelegate(10);
-        System.Console.WriteLine(result1);
-        myDelegate = new MyDelegate(Method2);
-        int result2 = myDelegate(10);
-        System.Console.WriteLine(result2);
+        myDelegate();
     }
 }
